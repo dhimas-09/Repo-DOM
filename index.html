@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Perpustakaan Digital - Quest 1 DOM</title>
+  
+  <!-- Hubungkan ke CSS -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <h1 class="header-judul">Perpus</h1>
+    <div class="header-meta">
+      <span id="badge-total" class="badge-header">0 buku</span>
+      <span id="badge-favorit" class="badge-header favorit" hidden>0 ❤</span>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <div id="kontainer-buku" class="grid-buku"></div>
+  <div id="panel-detail" class="panel-detail" hidden></div>
+</main>
+
+  <div class="container">
+    <h1 id="judul-perpustakaan">Perpustakaan Digital</h1>
+    <p id="info-status">Status Sistem: <span class="badge">Aktif</span></p>
+
+    <!-- Form Tambah Buku -->
+    <form id="form-buku" class="form-group">
+      <input type="text" id="input-judul" placeholder="Masukkan judul buku..." required />
+      <button type="submit" id="btn-tambah">Tambah Buku</button>
+    </form>
+
+    <!-- Tempat Pratinjau Teks (Event Input) -->
+    <p id="preview-judul"></p>
+
+    <h3>Daftar Buku Tersedia:</h3>
+    <!-- Tempat Daftar Buku Ditambahkan secara Dinamis -->
+    <ul id="daftar-buku"></ul>
+  </div>
+
+  <!-- Hubungkan ke JS -->
+  <script src="/app.js"></script>
+</body>
+</html>
